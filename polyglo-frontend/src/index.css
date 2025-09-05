@@ -1,0 +1,24 @@
+/*  ───  TAILWIND  ────────────────────────────── */
+@import 'tailwindcss';
+
+/* Target all possible React Query DevTools selectors */
+[data-rq-devtools],
+[data-rq-devtools] *,
+.rq-devtools,
+.rq-devtools *,
+div[style*="position: fixed"][style*="z-index"],
+div[style*="bottom"][style*="right"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide floating DevTools button */
+button[data-rq-devtools-toggle],
+button[aria-label*="devtools"],
+div[style*="position: fixed"] button {
+  display: none !important;
+}

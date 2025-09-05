@@ -1,0 +1,211 @@
+/* Import Tailwind v4 */
+@import "tailwindcss";
+
+/* Duolingo-Inspired Color Palette */
+:root {
+  --duo-green: #58cc02;              /* Duolingo's signature green */
+  --duo-green-dark: #46a302;        /* Darker green for hover states */
+  --duo-green-light: #89e219;       /* Light green for accents */
+  --duo-blue: #1cb0f6;              /* Duolingo blue */
+  --duo-red: #ff4b4b;               /* Duolingo red/pink */
+  --duo-yellow: #ffc800;            /* Duolingo yellow */
+  --duo-purple: #ce82ff;            /* Duolingo purple */
+  --duo-gray: #777777;              /* Duolingo gray */
+  --duo-gray-light: #f7f7f7;       /* Light gray background */
+  --white: #ffffff;
+  --text-dark: #3c3c3c;             /* Dark text */
+  --text-light: #777777;            /* Light text */
+}
+
+/* Background Colors */
+.bg-duo-green { background-color: var(--duo-green); }
+.bg-duo-green-dark { background-color: var(--duo-green-dark); }
+.bg-duo-green-light { background-color: var(--duo-green-light); }
+.bg-duo-blue { background-color: var(--duo-blue); }
+.bg-duo-red { background-color: var(--duo-red); }
+.bg-duo-yellow { background-color: var(--duo-yellow); }
+.bg-duo-purple { background-color: var(--duo-purple); }
+.bg-duo-gray { background-color: var(--duo-gray); }
+.bg-duo-gray-light { background-color: var(--duo-gray-light); }
+.bg-white { background-color: var(--white); }
+
+/* Text Colors */
+.text-duo-green { color: var(--duo-green); }
+.text-duo-green-dark { color: var(--duo-green-dark); }
+.text-duo-blue { color: var(--duo-blue); }
+.text-duo-red { color: var(--duo-red); }
+.text-duo-yellow { color: var(--duo-yellow); }
+.text-duo-purple { color: var(--duo-purple); }
+.text-duo-gray { color: var(--duo-gray); }
+.text-dark { color: var(--text-dark); }
+.text-light { color: var(--text-light); }
+.text-white { color: var(--white); }
+
+/* Border Colors */
+.border-duo-green { border-color: var(--duo-green); }
+.border-duo-green-dark { border-color: var(--duo-green-dark); }
+.border-duo-blue { border-color: var(--duo-blue); }
+.border-duo-red { border-color: var(--duo-red); }
+.border-duo-yellow { border-color: var(--duo-yellow); }
+.border-duo-purple { border-color: var(--duo-purple); }
+.border-duo-gray { border-color: var(--duo-gray); }
+
+/* Gradient Backgrounds - IMPORTANT for visibility */
+.bg-gradient-to-r { background-image: linear-gradient(to right, var(--from), var(--to)); }
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--from), var(--to)); }
+.bg-gradient-to-l { background-image: linear-gradient(to left, var(--from), var(--to)); }
+
+.from-duo-green { --from: var(--duo-green); }
+.from-duo-blue { --from: var(--duo-blue); }
+.from-duo-red { --from: var(--duo-red); }
+.from-duo-yellow { --from: var(--duo-yellow); }
+.from-duo-purple { --from: var(--duo-purple); }
+
+.to-duo-green { --to: var(--duo-green); }
+.to-duo-green-dark { --to: var(--duo-green-dark); }
+.to-duo-blue { --to: var(--duo-blue); }
+.to-duo-red { --to: var(--duo-red); }
+.to-duo-yellow { --to: var(--duo-yellow); }
+.to-duo-purple { --to: var(--duo-purple); }
+
+/* Specific gradient combinations used in components */
+.bg-gradient-to-r.from-duo-green.to-duo-green-dark {
+  background: linear-gradient(to right, var(--duo-green), var(--duo-green-dark));
+}
+
+.bg-gradient-to-br.from-duo-green.to-duo-blue {
+  background: linear-gradient(to bottom right, var(--duo-green), var(--duo-blue));
+}
+
+.bg-gradient-to-br.from-duo-green.to-duo-green-dark {
+  background: linear-gradient(to bottom right, var(--duo-green), var(--duo-green-dark));
+}
+
+.bg-gradient-to-br.from-duo-blue.to-duo-purple {
+  background: linear-gradient(to bottom right, var(--duo-blue), var(--duo-purple));
+}
+
+.bg-gradient-to-br.from-duo-green.to-duo-blue {
+  background: linear-gradient(to bottom right, var(--duo-green), var(--duo-blue));
+}
+
+.bg-gradient-to-br.from-duo-purple.to-duo-red {
+  background: linear-gradient(to bottom right, var(--duo-purple), var(--duo-red));
+}
+
+.bg-gradient-to-br.from-duo-yellow.to-duo-red {
+  background: linear-gradient(to bottom right, var(--duo-yellow), var(--duo-red));
+}
+
+/* Hover States */
+.hover\:bg-duo-green:hover { background-color: var(--duo-green); }
+.hover\:bg-duo-green-dark:hover { background-color: var(--duo-green-dark); }
+.hover\:bg-duo-blue:hover { background-color: var(--duo-blue); }
+.hover\:bg-duo-red:hover { background-color: var(--duo-red); }
+.hover\:bg-duo-yellow:hover { background-color: var(--duo-yellow); }
+.hover\:bg-duo-purple:hover { background-color: var(--duo-purple); }
+.hover\:bg-duo-gray-light:hover { background-color: var(--duo-gray-light); }
+
+.hover\:text-duo-green:hover { color: var(--duo-green); }
+.hover\:text-duo-blue:hover { color: var(--duo-blue); }
+.hover\:text-duo-red:hover { color: var(--duo-red); }
+
+.hover\:border-duo-green:hover { border-color: var(--duo-green); }
+.hover\:border-duo-blue:hover { border-color: var(--duo-blue); }
+
+/* Opacity variations */
+.bg-white\/20 { background-color: rgba(255, 255, 255, 0.2); }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.1); }
+.text-green-100 { color: #dcfce7; }
+.text-blue-100 { color: #dbeafe; }
+.text-yellow-100 { color: #fef3c7; }
+
+/* Duolingo-style animations */
+.animate-bounce-gentle {
+  animation: bounceGentle 2s ease-in-out infinite;
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Duolingo-style rounded corners */
+.rounded-duo { border-radius: 16px; }
+.rounded-duo-lg { border-radius: 24px; }
+
+/* Progress bar styles */
+.progress-bar {
+  background: linear-gradient(90deg, var(--duo-green) 0%, var(--duo-green-light) 100%);
+  border-radius: 12px;
+  height: 8px;
+}
+
+/* Focus states */
+.focus\:ring-duo-green:focus {
+  --tw-ring-color: var(--duo-green);
+}
+
+.focus\:ring-duo-blue:focus {
+  --tw-ring-color: var(--duo-blue);
+}
+
+.focus\:border-duo-green:focus {
+  border-color: var(--duo-green);
+}
+
+.focus\:border-duo-blue:focus {
+  border-color: var(--duo-blue);
+}
+
+/* This will hide ANY SVG that matches the devtools pattern */
+svg path[fill="#002C4B"],
+svg[width="256"][height="190"],
+div[style*="bottom"][style*="position: fixed"] svg {
+  display: none !important;
+}
+
+/* Add these keyframes to your main CSS file */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out both;
+}
