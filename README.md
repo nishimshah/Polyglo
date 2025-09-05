@@ -36,11 +36,4 @@ It focuses on interactive language learning features similar to **Duolingo**, in
 - PostgreSQL / SQLite (local dev)  
 - Supabase or Cloudinary for media uploads  
 
----
 
-## 📦 Installation & Setup
-
-### 1️⃣ Clone Repository
-```bash
-git clone https://github.com/yourusername/polyglo.git
-cd polyglo
